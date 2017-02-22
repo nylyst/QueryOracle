@@ -1,6 +1,9 @@
 # QueryOracle
 Powershell 5 module to enable working with Oracle instances using native powershell commands.
 
+Currently requires the user to locate their 32/64 bit ODP.Net assemblies and update QueryOracle.psm1.  Future enhancements will include finding the users %ORACLE_HOME% (or inspecting %PATH) and loading the assemblies automatically.
+
+
 [13:58:11][C:\]# Import-Module QueryOracle    
 [13:58:21][C:\]# $con = New-OracleConnection -Server $server -Credential $oracleCred  
 [13:58:59][C:\]# $cmd = New-OracleCommand -Connection $con -CommandType Text -Query "select 'Hello world (from Oracle)!' from dual"  
